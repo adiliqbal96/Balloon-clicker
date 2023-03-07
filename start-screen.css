@@ -1,0 +1,50 @@
+#start-screen {
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 5px solid grey;
+  background-image: url("img/sky.png");
+  position: relative;
+  overflow: hidden; /*hide balloons outside of the game screen*/
+}
+
+#start-screen h1 {
+  position: relative;
+  font-size: 100px;
+
+  font-family: "Passion One";
+  color: white;
+  top: 15px;
+  left: 5%;
+  text-shadow: -5px -3px 1px black, -5px -3px 0 black, -1px 5px 5px black,
+    1px 1px 3px black;
+}
+
+#play-btn {
+  padding: 10px 20px;
+  font-size: 60px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2196f3;
+  color: white;
+  position: fixed;
+  top: 350px;
+  left: 750px;
+  font-family: "Passion One";
+  cursor: pointer;
+}
+
+#how-to-play-btn {
+  padding: 10px 20px;
+  font-size: 60px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2196f3;
+  color: white;
+  position: fixed;
+  top: 500px;
+  left: 660px;
+  font-family: "Passion One";
+  cursor: pointer;
+  /* add this line */
+}

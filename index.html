@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balloon popping game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="start-screen.css" />
+    <link rel="stylesheet" href="howto.css"/>
+    <link rel="stylesheet" href="gameover.css"> 
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap");
+    </style>
+    
+ <div id="start-screen">
+  <h1>Welcome To The Balloon Clicker Game!</h1>
+  <div id="p"></div>
+  <button id="play-btn">Play</button>
+  <button id="how-to-play-btn">How To Play</button>
+</div>
+
+<div id="instructions" class="instructions" style="display: none">
+  <h2>How To Play</h2>
+      <img src="img/pilot.png" alt="Pilot instructions" id="pilot-img">
+  <p>Click On The Balloons to clear the field for the airplanes</p>
+  <p>Be Careful Not To Shoot Down Planes By Mistake, Or Else You Will Loose Your Lives</p>
+  <p>Good luck!</p>
+  <button id="back-btn"><img src="img/backarrowgold.png"></button>
+</div>
+    <div class="game-screen" style="display: none">
+      <div id="sky"></div>
+      <div id="sky2"></div>
+      <!-- add six balloons -->
+      <div id="balloon-orange" class="balloon"></div>
+      <div id="balloon-green" class="balloon"></div>
+      <div id="balloon-blue" class="balloon"></div>
+      <div id="balloon-yellow" class="balloon"></div>
+      <div id="balloon-purple" class="balloon"></div>
+      <div id="balloon-red" class="balloon"></div>
+
+      <!-- add four planes -->
+      <div id="black-plane" class="plane"></div>
+      <div id="red-plane" class="plane"></div>
+      <div id="green-plane" class="plane"></div>
+      <div id="yellow-plane" class="plane"></div>
+    <div id="game-ui"></div>
+    <!-- add score and lives -->
+    <div id="score">Score: 0</div>
+    <div id="star-container">
+      <img src="img/star.png" class="star" />
+    <div>
+
+    <div id="heart-container">
+      <img src="img/liv.png" class="heart" />
+      <img src="img/liv.png" class="heart" />
+      <img src="img/liv.png" class="heart" />
+    <div id="countdown-bar">
+      <div id="bar"></div>
+  <div id="button-container">
+  <button id="back-btn-game"><img src="img/home-button.png"></button>
+  <span id="home-text">Home</span>
+</div>
+
+<div id="game-over-screen">
+  <h1>GAME OVER!</h1>
+  <button id="gameover-home-btn"></button>
+</div>
+<audio id="pop-sound">
+  <source src="sounds/pop-sound" type="audio/mpeg">
+
+</audio>
+
+</div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

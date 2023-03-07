@@ -1,0 +1,256 @@
+.game-screen {
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 5px solid grey;
+  background-image: url("img/sky.png");
+  position: relative;
+  overflow: hidden; /*hide balloons outside of the game screen*/
+}
+
+#score {
+  position: absolute;
+  top: 40px;
+  left: 160px;
+  font-family: "Passion One", sans-serif;
+  font-size: 72px;
+  color: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+#star-container {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.star {
+  height: 100px;
+  width: 100px;
+}
+
+#heart-container {
+  position: fixed;
+  top: 25px;
+  right: 480px;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 1;
+}
+
+.heart {
+  height: 130px;
+  width: 130px;
+  margin-left: 20px;
+}
+
+#countdown-bar {
+  position: fixed;
+  width: 60%;
+  height: 20px;
+  background-color: red;
+  top: 820px;
+  left: 180px;
+  z-index: 1;
+  border: 4px solid black;
+  animation: countdown 60s linear forwards;
+}
+
+@keyframes countdown {
+  from {
+    width: 60%;
+  }
+  to {
+    width: 0%;
+  }
+}
+#button-container {
+  display: flex;
+  align-items: center;
+}
+
+#back-btn-game {
+  margin-right: 10px; /* Add some space between the button and the text */
+  position: absolute;
+  top: -60px;
+  left: 1320px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 20px;
+}
+
+#home-text {
+  position: relative;
+  font-size: 35px;
+  top: -25px;
+  left: 1250px;
+  font-family: "Passion One";
+  color: white;
+}
+
+.bar {
+  width: 100%;
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 60s linear;
+}
+
+.balloon {
+  width: 130px;
+  height: 300px;
+  position: absolute;
+  top: 1000px;
+  animation: balloon-fly 5s linear infinite;
+  cursor: pointer; /*add cursor pointer to show clickable balloons*/
+}
+
+#balloon-orange {
+  background-image: url("img/orange.png");
+  left: 50px;
+  animation-delay: 0s;
+}
+
+#balloon-green {
+  background-image: url("img/green.png");
+  left: 200px;
+  animation-delay: 0.5s;
+}
+
+#balloon-blue {
+  background-image: url("img/blue.png");
+  left: 350px;
+  animation-delay: 1.5s;
+}
+
+#balloon-yellow {
+  background-image: url("img/yellow.png");
+  left: 500px;
+  animation-delay: 2.5s;
+}
+
+#balloon-purple {
+  background-image: url("img/purple.png");
+  left: 650px;
+  animation-delay: 3.5s;
+}
+
+#balloon-red {
+  background-image: url("img/red.png");
+  left: 800px;
+  animation-delay: 4.5s;
+}
+
+.pop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no repeat;
+}
+
+@keyframes balloon-fly {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1290px); /*Move baloons to top of screen*/
+  }
+}
+
+.plane {
+  position: absolute;
+  left: -350px;
+  animation: plane-fly 2s linear infinite;
+  cursor: pointer; /*Show clickable planes*/
+}
+
+#black-plane {
+  bottom: 0px;
+  width: 300px;
+  height: 177px;
+  background-image: url(img/Planes/plane_1_black.png);
+  animation-delay: 0.5s;
+}
+
+#red-plane {
+  background-image: url(img/Planes/plane_2_red.png);
+  bottom: 210px;
+  width: 300px;
+  height: 165px;
+  animation-delay: 1s;
+}
+
+#green-plane {
+  background-image: url(img/Planes/plane_3_green.png);
+  width: 300px;
+  height: 148px;
+  bottom: 410px;
+  animation-delay: 3.5s;
+}
+
+#yellow-plane {
+  background-image: url(img/Planes/plane_3_yellow.png);
+  width: 300px;
+  height: 148px;
+  bottom: 620px;
+  animation-delay: 4.5s;
+}
+
+@keyframes plane-fly {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1900px);
+  }
+}
+
+#explosion {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+  animation: explode 0.8s ease-in-out forwards;
+}
+
+@keyframes explode {
+  0% {
+    background-image: url(img/Explosion/explosion_01.png);
+  }
+  11% {
+    background-image: url(img/Explosion/explosion_02.png);
+  }
+  22% {
+    background-image: url(img/Explosion/explosion_03.png);
+  }
+  33% {
+    background-image: url(img/Explosion/explosion_04.png);
+  }
+  44% {
+    background-image: url(img/Explosion/explosion_05.png);
+  }
+  55% {
+    background-image: url(img/Explosion/explosion_06.png);
+  }
+  66% {
+    background-image: url(img/Explosion/explosion_07.png);
+  }
+  77% {
+    background-image: url(img/Explosion/explosion_08.png);
+  }
+  88% {
+    background-image: url(img/Explosion/explosion_09.png);
+  }
+  100% {
+    background-image: url(img/Explosion/explosion_09.png);
+  }
+}
