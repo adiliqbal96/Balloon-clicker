@@ -1,11 +1,18 @@
 .game-screen {
   z-index: 1;
   width: 100%;
+  height: 100%;
   aspect-ratio: 16/9;
   border: 5px solid grey;
-  background-image: url("img/sky.png");
+  background-image: url("img/skyy.jpg");
+  background-size: cover;
   position: relative;
-  overflow: hidden; /*hide balloons outside of the game screen*/
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: moveBackground 60s linear infinite;
 }
 
 #score {
@@ -18,6 +25,8 @@
   z-index: 1;
   display: flex;
   align-items: center;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
 }
 
 #star-container {
@@ -35,8 +44,8 @@
 
 #heart-container {
   position: fixed;
-  top: 25px;
-  right: 480px;
+  top: 20px; /* adjust the top position as needed */
+  right: 20px; /* adjust the right position as needed */
   display: flex;
   flex-direction: row-reverse;
   z-index: 1;
@@ -48,18 +57,6 @@
   margin-left: 20px;
 }
 
-#countdown-bar {
-  position: fixed;
-  width: 60%;
-  height: 20px;
-  background-color: red;
-  top: 820px;
-  left: 180px;
-  z-index: 1;
-  border: 4px solid black;
-  animation: countdown 60s linear forwards;
-}
-
 @keyframes countdown {
   from {
     width: 60%;
@@ -68,16 +65,19 @@
     width: 0%;
   }
 }
-#button-container {
+#home-button-container {
+  position: fixed;
+  top: 700px;
+  left: 1450px;
   display: flex;
   align-items: center;
 }
 
-#back-btn-game {
+#home-btn-game {
   margin-right: 10px; /* Add some space between the button and the text */
   position: absolute;
-  top: -60px;
-  left: 1320px;
+  top: 850px;
+  left: 1650px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -94,11 +94,18 @@
   color: white;
 }
 
-.bar {
-  width: 100%;
-  height: 100%;
-  background-color: #4caf50;
-  transition: width 60s linear;
+#countdown-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 20px;
+  background-color: red;
+  border: 4px solid black;
+  z-index: 1;
+  animation: countdown 60s linear forwards;
+  transform-origin: center;
+  margin: 0 auto;
 }
 
 .balloon {

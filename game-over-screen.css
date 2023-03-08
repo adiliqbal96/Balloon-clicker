@@ -1,0 +1,66 @@
+#game-over-screen {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  border: 5px solid grey;
+  background-image: url("img/skyy.jpg");
+  background-size: cover;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Passion one;
+  font-size: 100px;
+  color: white;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
+  -webkit-text-stroke: 1px black;
+  animation: moveBackground 60s linear infinite;
+}
+
+#game-over-screen h1 {
+  text-align: center;
+  animation: pulsate 1.5s ease-in-out infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#game-over-screen p {
+  font-size: 120px;
+  text-align: center;
+  animation: pulsate 1.5s ease-in-out infinite;
+}
+
+#game-over-score {
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
+  -webkit-text-stroke: 1px black;
+  font-size: 100;
+}
+
+#restart-btn {
+  padding: 2vw 4vw;
+  font-size: 4vw;
+  border: none;
+  border-radius: 5vw;
+  background-color: #2196f3;
+  color: white;
+  font-family: "Passion One";
+  cursor: pointer;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

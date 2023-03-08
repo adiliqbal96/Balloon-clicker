@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="start-screen.css" />
     <link rel="stylesheet" href="howto.css"/>
-    <link rel="stylesheet" href="gameover.css"> 
+    <link rel="stylesheet" href="game-over-screen.css"> 
   </head>
   <body>
     <style>
@@ -30,6 +30,14 @@
   <p>Good luck!</p>
   <button id="back-btn"><img src="img/backarrowgold.png"></button>
 </div>
+
+<div id="game-over-screen" style="display: none;">
+  <h1>Game Over!</h1>
+  <p>Your Score: <span id="game-over-score"></span></p>
+  <button id="restart-btn">Home</button>
+</div>
+
+
     <div class="game-screen" style="display: none">
       <div id="sky"></div>
       <div id="sky2"></div>
@@ -46,7 +54,8 @@
       <div id="red-plane" class="plane"></div>
       <div id="green-plane" class="plane"></div>
       <div id="yellow-plane" class="plane"></div>
-    <div id="game-ui"></div>
+    
+      <div id="game-ui"></div>
     <!-- add score and lives -->
     <div id="score">Score: 0</div>
     <div id="star-container">
@@ -57,17 +66,17 @@
       <img src="img/liv.png" class="heart" />
       <img src="img/liv.png" class="heart" />
       <img src="img/liv.png" class="heart" />
+      </div>
     <div id="countdown-bar">
       <div id="bar"></div>
   <div id="button-container">
-  <button id="back-btn-game"><img src="img/home-button.png"></button>
-  <span id="home-text">Home</span>
+  <button id="home-btn-game"><img src="img/home-button.png"></button>
+  <span id="home-text"></span>
 </div>
 
-<div id="game-over-screen">
-  <h1>GAME OVER!</h1>
-  <button id="gameover-home-btn"></button>
+
 </div>
+
 <audio id="pop-sound">
   <source src="sounds/pop-sound" type="audio/mpeg">
 
